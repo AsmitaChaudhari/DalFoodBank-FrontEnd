@@ -1,0 +1,105 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+  min-height: 90vh;
+  margin-top: 55px;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.navbar {
+  background: #22223b;
+
+  .navbar-toggler {
+    background-color: white;
+  }
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "Menu";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  }
+  a {
+    color: white;
+  }
+  .navbar-item a:hover {
+    background-color: red;
+  }
+  .nav-item {
+    color: white;
+    margin-right: 30px;
+  }
+  .nav-icon {
+    color: white;
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-left: 30px;
+  }
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+  background: #0f0f1a;
+
+  .container {
+    .row {
+      justify-content: center;
+      color: white;
+
+      li {
+        a {
+          color: white;
+        }
+      }
+    }
+
+    .footer-icon {
+      .fa {
+        padding: 10px;
+        font-size: 25px;
+        //width: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin: 3px 2px;
+        //border-radius: 50%;
+      }
+
+      .fa:hover {
+        opacity: 0.7;
+      }
+
+      .fa-facebook {
+        //background: #3B5998;
+        color: white;
+      }
+
+      .fa-twitter {
+        //background: #55ACEE;
+        color: white;
+      }
+
+      .fa-youtube {
+        //background: #bb0000;
+        color: white;
+      }
+
+      .fa-instagram {
+        //background: #125688;
+        color: white;
+      }
+    }
+  }
+}

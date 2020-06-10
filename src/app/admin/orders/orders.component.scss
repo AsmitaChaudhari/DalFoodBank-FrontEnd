@@ -1,0 +1,61 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  margin: 1rem;
+  h1 {
+    text-align: center;
+    color: black;
+    font-family: serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  mat-divider {
+    margin: 1rem;
+  }
+
+  .vertical-nav {
+    //background-color: darkseagreen;
+    float: left;
+    height: auto;
+
+    .navbar {
+      // margin: 10px 0;
+      padding: 0;
+      width: inherit;
+
+      .navbar-nav,
+      .nav-item {
+        width: inherit;
+      }
+
+      a {
+        text-align: center;
+        color: white;
+      }
+      .active {
+        background-color: white;
+        color: teal;
+      }
+
+      a:hover:not(.active) {
+        background: teal;
+      }
+    }
+  }
+}
+
+.details {
+  padding: 2rem;
+  background-color: darkgray;
+  float: right;
+  height: auto;
+  align-items: center;
+  width: 80;
+}

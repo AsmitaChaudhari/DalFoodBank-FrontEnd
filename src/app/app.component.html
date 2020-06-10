@@ -1,0 +1,82 @@
+<!-----Nav bar -->
+<nav class="navbar navbar-expand-sm fixed-top">
+  <a class="navbar-brand">DAL Food Bank</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+
+  <!-- <span class="example-spacer"></span> -->
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="'/home'">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/admin/workers'">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/donate'">Donate</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="'/login'">LogOut</a>
+      </li>
+      <li>
+        <mat-icon class="nav-icon" aria-hidden="false" aria-label="cart icon">shopping_cart</mat-icon>
+      </li>
+      <li>
+        <mat-icon class="nav-icon" aria-hidden="false" aria-label="cart icon">account_circle</mat-icon>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<div class="cleafix"></div>
+<!-----Footer----->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 h-100 text-center my-auto">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item">
+            <a [routerLink]="'/about'">About Us</a>
+          </li>
+          <li class="list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a [routerLink]="'/contact'">Contact Us</a>
+          </li>
+          <li class="list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a [routerLink]="'/policy/privacy'">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a [routerLink]="'/policy/privacy'">Terms & Condition</a>
+          </li>
+        </ul>
+        <div class="footer-icon text-center">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="footer-copyright text-center">
+          © 2020 Copyright:
+          <a [routerLink]="'/home'"> www.dalfoodbank.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,53 @@
+header.masthead {
+  position: relative;
+  background-color: #9a8c98;
+  background: url("../../assets/Img/board-bread-breakfast-bunch-349610.jpg") no-repeat; //center center;
+  background-size: cover;
+  opacity: 90%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .overlay {
+    position: absolute;
+    // background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: black;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+}
+
+.features-icons {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  background: #f2e9e4;
+
+  .features-icons-item {
+    max-width: 20rem;
+
+    .features-icons-icon {
+      height: 5rem;
+
+      mat-icon {
+        font-size: 2.5rem;
+        color: #22223b;
+      }
+    }
+  }
+
+  .features-icons-item:hover {
+    .features-icons-icon {
+      mat-icon {
+        font-size: 3.5rem;
+        color: #a53860;
+      }
+    }
+  }
+}

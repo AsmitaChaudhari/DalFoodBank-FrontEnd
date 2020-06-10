@@ -1,0 +1,39 @@
+.content {
+  //margin-top: 0.5rem;
+  .left-part {
+    .overlay {
+      .img-fluid {
+        padding-top: 8rem;
+      }
+      //         //src: url("../../assets/Img/donate.PNG ") no-repeat;
+      //         // position: relative;
+      //         // background-size: cover;
+      //         // background-color: #cccccc;
+      //         // height: 600px;
+      //         // padding: 0.5rem;
+    }
+    float: left;
+    height: auto;
+  }
+
+  .right-part {
+    //background-color: dimgray;
+    float: right;
+
+    .card {
+      margin: 1rem;
+      align-items: center;
+      // padding: 1rem;
+
+      .h2 {
+        font-family: Montserrat-Medium;
+        font-weight: bold;
+      }
+
+      .mat-divider {
+        margin: 1rem;
+        border-top-width: 2px;
+      }
+    }
+  }
+}

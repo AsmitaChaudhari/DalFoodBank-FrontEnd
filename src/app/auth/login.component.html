@@ -1,0 +1,90 @@
+<div class="body">
+  <div class="container">
+    <div class="card mat-elevation-z8">
+      <div class="card-body">
+        <h2 class="card-title">User Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Email Id</label>
+            <input
+              type="email"
+              formControlName="username"
+              class="form-control"
+              placeholder="Email Id"
+              name="email"
+              required
+            />
+            <span
+              class="error-message"
+              *ngIf="
+                (loginForm.controls['username'].dirty || loginForm.controls['username'].touched) &&
+                loginForm.controls['username'].invalid &&
+                loginForm.controls['username'].errors.required
+              "
+            >
+              Email is required.
+            </span>
+            <span
+              class="error-message"
+              *ngIf="
+                (loginForm.controls['username'].dirty || loginForm.controls['username'].touched) &&
+                loginForm.controls['username'].invalid &&
+                loginForm.controls['username'].errors.pattern
+              "
+            >
+              Enter Valid Email Address.
+            </span>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control"
+              placeholder="Password"
+              name="password"
+              required
+            />
+            <span
+              class="error-message"
+              *ngIf="
+                (loginForm.controls['password'].dirty || loginForm.controls['password'].touched) &&
+                loginForm.controls['password'].invalid &&
+                loginForm.controls['password'].errors.required
+              "
+            >
+              Password is required.
+            </span>
+            <span
+              class="error-message"
+              *ngIf="
+                (loginForm.controls['password'].dirty || loginForm.controls['password'].touched) &&
+                loginForm.controls['password'].invalid &&
+                loginForm.controls['password'].errors.pattern
+              "
+            >
+              Password should contain
+              <ul>
+                <li>Atleast one digit</li>
+                <li>One upercase, one lowercase and, one special character</li>
+                <li>Atleast 8 character in length</li>
+              </ul>
+            </span>
+            <span class="error-message"></span>
+          </div>
+          <div class="text-center">
+            <!-- Forgot password -->
+            <a [routerLink]="'/login'">Forgot password?</a>
+          </div>
+          <button class="btn btn-primary btn-block my-4" type="submit" color="primary" [disabled]="!loginForm.valid">
+            Login
+          </button>
+          <p class="text-center">
+            Not a member?
+            <a [routerLink]="'/login'">Register</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
