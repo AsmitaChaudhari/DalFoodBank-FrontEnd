@@ -11,11 +11,9 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['dialogbox.component.scss'],
 })
 export class dialogbox {
-  constructor(
-    private router: Router,
-    public dialog: MatDialog) {}
+  constructor(private router: Router, public dialog: MatDialog) {}
 
-  onClick(){
+  onClick() {
     this.router.navigate(['home']);
   }
 }

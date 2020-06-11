@@ -39,7 +39,7 @@
             <label>Password</label>
             <input
               type="password"
-              formControlName="password"
+              formControlName="pwd"
               class="form-control"
               placeholder="Password"
               name="password"
@@ -48,9 +48,9 @@
             <span
               class="error-message"
               *ngIf="
-                (loginForm.controls['password'].dirty || loginForm.controls['password'].touched) &&
-                loginForm.controls['password'].invalid &&
-                loginForm.controls['password'].errors.required
+                (loginForm.controls['pwd'].dirty || loginForm.controls['pwd'].touched) &&
+                loginForm.controls['pwd'].invalid &&
+                loginForm.controls['pwd'].errors.required
               "
             >
               Password is required.
@@ -58,12 +58,11 @@
             <span
               class="error-message"
               *ngIf="
-                (loginForm.controls['password'].dirty || loginForm.controls['password'].touched) &&
-                loginForm.controls['password'].invalid &&
-                loginForm.controls['password'].errors.pattern
+                (loginForm.controls['pwd'].dirty || loginForm.controls['pwd'].touched) &&
+                loginForm.controls['pwd'].invalid &&
+                loginForm.controls['pwd'].errors.pattern
               "
             >
-              Password should contain
               <ul>
                 <li>Atleast one digit</li>
                 <li>One upercase, one lowercase and, one special character</li>

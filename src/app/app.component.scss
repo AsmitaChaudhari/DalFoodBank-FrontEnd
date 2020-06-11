@@ -18,9 +18,10 @@ footer {
 .navbar {
   background: #22223b;
 
-  .navbar-toggler {
-    background-color: white;
+   .navbar-toggler {
+     color: white;
   }
+  
   .navbar-toggler-icon {
     display: inline-block;
     width: 1.5em;
@@ -29,6 +30,8 @@ footer {
     content: "Menu";
     background: no-repeat center center;
     background-size: 100% 100%;
+   // background-image: linear-gradient(white,whitesmoke);
+    
   }
   a {
     color: white;

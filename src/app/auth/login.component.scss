@@ -6,12 +6,12 @@
   background-color: #f5f5f5;
 }
 
-
 .body {
-  //background-image: url("../../assets/Img/ingredients-homemade-pizza_35641-2533.jpg");
-  //background-position: center;
- // background-size: cover;
-  // linear-gradient(#4A4E69,#9A8C98,#C9ADA7,#4A4E69);
+  // background-image: url("../../assets/Img/luca-bravo-xnqVGsbXgV4-unsplash.jpg");
+  // background-position: center;
+  // background-size: cover;
+  // opacity: 80%;
+  background-image:linear-gradient(#4A4E69,#9A8C98,#4A4E69);
   width: 100%;
 
   .container {
@@ -23,7 +23,7 @@
     align-items: center;
 
     .card {
-      min-width: 500px;
+      min-width: 40vw;
 
       .card-title {
         font-family: Montserrat-Medium;

@@ -1,21 +1,17 @@
-.container{
-    display: flex;
-    flex-direction: column;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+
+  .row {
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 100%;
-
-
-    .row{
-        justify-content: center;
-        align-items: center;
-        .img-fluid{
-            height: 60%;
-            width: 50%;
-           
-        }
-        
+    .img-fluid {
+      height: 60%;
+      width: 50%;
     }
-    
+  }
 }

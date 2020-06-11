@@ -12,10 +12,11 @@
   margin: 1rem;
   h1 {
     text-align: center;
-    color: black;
+    color: #a53860;
     font-family: serif;
     font-weight: bold;
     margin-bottom: 1rem;
+    background-color: gainsboro;
   }
 
   mat-divider {
@@ -23,7 +24,7 @@
   }
 
   .vertical-nav {
-    //background-color:#f2e9e4;
+    //background-color: gainsboro;
     float: left;
     height: auto;
     margin-bottom: 10px;
@@ -32,7 +33,7 @@
       // margin: 10px 0;
       padding: 0;
       width: inherit;
-      background-color: #c9ada7;
+      background-color: #22223b;
       font-weight: bold;
 
       .navbar-nav,
@@ -42,7 +43,7 @@
 
       a {
         text-align: center;
-        color: black;
+        color: white;
       }
       .active {
         background-color: white;
@@ -50,22 +51,26 @@
       }
 
       a:hover:not(.active) {
-        background: #22223b;
-        color: white;
+        background:white;
+        color: black;
       }
     }
   }
 
   .details {
     padding: 2rem;
-    background-color: whitesmoke;
+    background-color: gainsboro;
     float: right;
     height: auto;
     align-items: center;
     // width: 80;
 
+
     .container {
       background-color: white;
+
+      
+
       table {
         width: 100%;
 

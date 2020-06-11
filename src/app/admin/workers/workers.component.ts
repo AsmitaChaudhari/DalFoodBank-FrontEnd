@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -12,6 +13,15 @@ export class AdminWorkersComponent implements OnInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
+  // getVolanteer() {
+  //   const filterValue = element
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
+  // }
+
+  // removeColumn() {
+    
+  // }
 
   constructor() {}
 
