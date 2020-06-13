@@ -16,7 +16,9 @@
     font-family: serif;
     font-weight: bold;
     margin-bottom: 1rem;
-    background-color: gainsboro;
+    //background-color: gainsboro;
+    box-shadow: 0 16px 16px -16px #22223b;
+    border-radius: 8px;
   }
 
   mat-divider {
@@ -59,10 +61,11 @@
 
   .details {
     padding: 2rem;
-    background-color: gainsboro;
+    background-color:whitesmoke;
     float: right;
     height: auto;
     align-items: center;
+    //box-shadow: 10px 10px 5px 0px #22223b;
     // width: 80;
 
 
