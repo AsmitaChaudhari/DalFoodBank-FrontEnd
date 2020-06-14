@@ -30,6 +30,7 @@
     float: left;
     height: auto;
     margin-bottom: 10px;
+    //border: black;
 
     .navbar {
       // margin: 10px 0;
@@ -61,12 +62,13 @@
 
   .details {
     padding: 2rem;
-    background-color:whitesmoke;
+    background-color:#FAFBFD;
     float: right;
     height: auto;
     align-items: center;
-    //box-shadow: 10px 10px 5px 0px #22223b;
+    //box-shadow: 0px 0px 5px 2px #22223b;
     // width: 80;
+    //background-image:repeating-linear-gradient(#F2E9E4,#9A8C98);
 
 
     .container {

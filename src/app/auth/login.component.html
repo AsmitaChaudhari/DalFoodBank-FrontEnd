@@ -1,6 +1,6 @@
 <div class="body">
   <div class="container">
-    <div class="card mat-elevation-z8">
+    <div class="card"> <!--mat-elevation-z8-->
       <div class="card-body">
         <h2 class="card-title">User Login</h2>
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -54,6 +54,11 @@
               "
             >
               Password is required.
+              <ul>
+                <li>Atleast one digit</li>
+                <li>One upercase, one lowercase and, one special character</li>
+                <li>Atleast 8 character in length</li>
+              </ul>
             </span>
             <span
               class="error-message"

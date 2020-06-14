@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   private createForm() {
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$')]],
-      pwd: ['', [Validators.required]], // Validators.pattern('^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-]).{8,}$')]],
+      pwd: ['', [Validators.required, Validators.minLength(8)]], // Validators.pattern('^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-]).{8,}$')]],
       remember: true,
     });
   }
