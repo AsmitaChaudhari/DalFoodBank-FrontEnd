@@ -15,15 +15,14 @@ footer {
   flex-shrink: 0;
 }
 
-
 .navbar {
   background: #22223b;
   box-shadow: 0px 16px 16px -16px rgba;
 
-   .navbar-toggler {
-     color: white;
+  .navbar-toggler {
+    color: white;
   }
-  
+
   .navbar-toggler-icon {
     display: inline-block;
     width: 1.5em;
@@ -32,9 +31,12 @@ footer {
     content: "Menu";
     background: no-repeat center center;
     background-size: 100% 100%;
-   // background-image: linear-gradient(white,whitesmoke);
-    
   }
+
+  .nav-tabs {
+    border-bottom: #22223b;
+  }
+
   a {
     color: white;
   }
@@ -75,11 +77,9 @@ footer {
       .fa {
         padding: 10px;
         font-size: 25px;
-        //width: 30px;
         text-align: center;
         text-decoration: none;
         margin: 3px 2px;
-        //border-radius: 50%;
       }
 
       .fa:hover {
@@ -87,22 +87,18 @@ footer {
       }
 
       .fa-facebook {
-        //background: #3B5998;
         color: white;
       }
 
       .fa-twitter {
-        //background: #55ACEE;
         color: white;
       }
 
       .fa-youtube {
-        //background: #bb0000;
         color: white;
       }
 
       .fa-instagram {
-        //background: #125688;
         color: white;
       }
     }

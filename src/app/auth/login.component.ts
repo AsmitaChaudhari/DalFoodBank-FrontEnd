@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   error: string | undefined;
   loginForm!: FormGroup;
   isLoading = false;
-  pwdPattern = '^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$';
+  pwdPattern = '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$';
 
   constructor(
     private router: Router,
@@ -34,29 +34,6 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {}
 
-  // login() {
-  //   this.isLoading = true;
-  //   const login$ = this.authenticationService.login(this.loginForm.value);
-  //   login$
-  //     .pipe(
-  //       finalize(() => {
-  //         this.loginForm.markAsPristine();
-  //         this.isLoading = false;
-  //       }),
-  //       untilDestroyed(this)
-  //     )
-  //     .subscribe(
-  //       (credentials) => {
-  //         log.debug(`${credentials.username} successfully logged in`);
-  //         this.router.navigate([this.route.snapshot.queryParams.redirect || '/'], { replaceUrl: true });
-  //       },
-  //       (error) => {
-  //         log.debug(`Login error: ${error}`);
-  //         this.error = error;
-  //       }
-  //     );
-  // }
-
   onSubmit() {
     if (this.loginForm.valid) {
       this.router.navigate(['home']);
@@ -68,7 +45,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   private createForm() {
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$')]],
-      pwd: ['', [Validators.required, Validators.minLength(8)]], // Validators.pattern('^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-]).{8,}$')]],
+      pwd: ['', [Validators.required, Validators.minLength(8), Validators.pattern(this.pwdPattern)]],
       remember: true,
     });
   }

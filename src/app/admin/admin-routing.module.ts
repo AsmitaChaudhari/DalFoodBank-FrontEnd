@@ -13,9 +13,7 @@ const routes: Routes = [
     path: '',
     component: AdminComponent,
     data: { title: extract('About') },
-    children: [
-      { path: 'workers', component: AdminWorkersComponent, data: { title: extract('About') } },
-    ],
+    children: [{ path: 'workers', component: AdminWorkersComponent, data: { title: extract('About') } }],
   },
 ];
 

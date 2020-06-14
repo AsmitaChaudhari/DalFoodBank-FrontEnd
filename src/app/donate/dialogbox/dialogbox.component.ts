@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router, ActivatedRoute } from '@angular/router';
 
-/**
- * @title Dialog with header, scrollable content and actions
- */
 @Component({
   selector: 'workers-dialogbox',
   templateUrl: 'dialogbox.component.html',

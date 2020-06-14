@@ -10,18 +10,9 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class AdminWorkersComponent implements OnInit {
   displayedColumns: string[] = ['position', 'firstname', 'lastname', 'role'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource<EmployeeDetails>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-
-  // getVolanteer() {
-  //   const filterValue = element
-  //   this.dataSource.filter = filterValue.trim().toLowerCase();
-  // }
-
-  // removeColumn() {
-    
-  // }
 
   constructor() {}
 
@@ -30,14 +21,15 @@ export class AdminWorkersComponent implements OnInit {
   }
 }
 
-export interface PeriodicElement {
+export interface EmployeeDetails {
   firstname: string;
   lastname: string;
   position: number;
   role: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+// Data for table
+const ELEMENT_DATA: EmployeeDetails[] = [
   { position: 1, firstname: 'Asmita', lastname: 'Chaudhari', role: 'Volunteer' },
   { position: 2, firstname: 'Malav', lastname: 'Jani', role: 'Employee' },
   { position: 3, firstname: 'Parth', lastname: 'Parmar', role: 'Volnteer' },

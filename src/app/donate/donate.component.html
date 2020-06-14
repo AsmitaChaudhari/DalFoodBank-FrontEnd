@@ -5,37 +5,133 @@
         <img class="img-fluid" src="../../assets/Img/donate.PNG" />
       </div>
     </div>
+
+    <!--Donation Form-->
     <div class="container-fluid col-md-6 right-part">
       <div class="card mat-elevation-z8">
         <div class="card-body">
           <h2 class="card-title text-center">Donation Form</h2>
           <mat-divider></mat-divider>
-          <form  class="donation-form">
+          <form [formGroup]="donationform" (ngSubmit)="onSubmit()">
             <div class="form-row">
               <div class="form-group col-md-6">
+                <!--First Name-->
                 <label for="inputFirstName">First Name</label>
-                <input type="text" class="form-control" id="inputFirstName" placeholder="FirstName"  required />
+                <input
+                  type="text"
+                  formControlName="firstname"
+                  class="form-control"
+                  id="inputFirstName"
+                  placeholder="FirstName"
+                  required
+                />
+                <span
+                  class="error-message"
+                  *ngIf="
+                    (donationform.controls['firstname'].dirty || donationform.controls['firstname'].touched) &&
+                    donationform.controls['firstname'].invalid &&
+                    donationform.controls['firstname'].errors.required
+                  "
+                >
+                  First Name is required.
+                </span>
               </div>
+
+              <!--Last Name-->
               <div class="form-group col-md-6">
                 <label for="inputLastName">Last Name</label>
-                <input type="text" class="form-control" id="inputLastName" placeholder="LastName" required />
+                <input
+                  type="text"
+                  formControlName="lastname"
+                  class="form-control"
+                  id="inputLastName"
+                  placeholder="LastName"
+                  required
+                />
+                <span
+                  class="error-message"
+                  *ngIf="
+                    (donationform.controls['lastname'].dirty || donationform.controls['lastname'].touched) &&
+                    donationform.controls['lastname'].invalid &&
+                    donationform.controls['lastname'].errors.required
+                  "
+                >
+                  Last Name is required.
+                </span>
               </div>
             </div>
+
+            <!--Email-->
             <div class="form-group">
               <label for="inputemail">Email</label>
-              <input type="email" class="form-control" id="inputemail" placeholder="Email" required/>
+              <input
+                type="email"
+                formControlName="email"
+                class="form-control"
+                id="inputemail"
+                placeholder="Email"
+                required
+              />
+              <span
+                class="error-message"
+                *ngIf="
+                  (donationform.controls['email'].dirty || donationform.controls['email'].touched) &&
+                  donationform.controls['email'].invalid &&
+                  donationform.controls['email'].errors.required
+                "
+              >
+                Email is required.
+              </span>
+              <span
+                class="error-message"
+                *ngIf="
+                  (donationform.controls['email'].dirty || donationform.controls['email'].touched) &&
+                  donationform.controls['email'].invalid &&
+                  donationform.controls['email'].errors.pattern
+                "
+              >
+                Please Enter Valid Email Address.
+              </span>
             </div>
+
+            <!--Phone Number-->
             <div class="form-group">
               <label for="inputphonenumber">Phone Number</label>
-              <input type="text" class="form-control" id="inputphonenumber" placeholder="Phone Number" />
+              <input
+                type="text"
+                class="form-control"
+                id="inputphonenumber"
+                placeholder="Phone Number"
+                maxlength="10"
+                data-fv-numeric="true"
+              />
             </div>
+
+            <!--Amount-->
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputAmount">Amount</label>
-                <input type="text" class="form-control" id="inputAmount" placeholder="$ 0.0" />
+                <input type="tel" formControlName="amount" class="form-control" id="inputAmount" placeholder="$ 0.0" />
+                <span
+                  class="error-message"
+                  *ngIf="
+                    (donationform.controls['amount'].dirty || donationform.controls['email'].touched) &&
+                    donationform.controls['amount'].invalid &&
+                    donationform.controls['amount'].errors.required
+                  "
+                >
+                  Amount is required.
+                </span>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-block my-4" (click)="openDialog()">Donate</button>
+            <button
+              type="submit"
+              class="btn btn-primary btn-block my-4"
+              (click)="openDialog()"
+              [disabled]="!donationform.valid"
+            >
+              Donate
+            </button>
           </form>
         </div>
       </div>

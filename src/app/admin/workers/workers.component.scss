@@ -16,7 +16,6 @@
     font-family: serif;
     font-weight: bold;
     margin-bottom: 1rem;
-    //background-color: gainsboro;
     box-shadow: 0 16px 16px -16px #22223b;
     border-radius: 8px;
   }
@@ -26,14 +25,11 @@
   }
 
   .vertical-nav {
-    //background-color: gainsboro;
     float: left;
     height: auto;
     margin-bottom: 10px;
-    //border: black;
 
     .navbar {
-      // margin: 10px 0;
       padding: 0;
       width: inherit;
       background-color: #22223b;
@@ -54,7 +50,7 @@
       }
 
       a:hover:not(.active) {
-        background:white;
+        background: white;
         color: black;
       }
     }
@@ -62,19 +58,13 @@
 
   .details {
     padding: 2rem;
-    background-color:#FAFBFD;
+    background-color: #fafbfd;
     float: right;
     height: auto;
     align-items: center;
-    //box-shadow: 0px 0px 5px 2px #22223b;
-    // width: 80;
-    //background-image:repeating-linear-gradient(#F2E9E4,#9A8C98);
-
 
     .container {
       background-color: white;
-
-      
 
       table {
         width: 100%;
