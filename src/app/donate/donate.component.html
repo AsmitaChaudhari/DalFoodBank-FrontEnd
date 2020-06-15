@@ -115,7 +115,7 @@
                 <span
                   class="error-message"
                   *ngIf="
-                    (donationform.controls['amount'].dirty || donationform.controls['email'].touched) &&
+                    (donationform.controls['amount'].dirty || donationform.controls['amount'].touched) &&
                     donationform.controls['amount'].invalid &&
                     donationform.controls['amount'].errors.required
                   "

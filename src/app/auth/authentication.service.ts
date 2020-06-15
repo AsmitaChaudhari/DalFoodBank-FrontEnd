@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, BehaviorSubject} from 'rxjs';
 
 import { Credentials, CredentialsService } from './credentials.service';
 
@@ -17,8 +17,18 @@ export interface LoginContext {
   providedIn: 'root',
 })
 export class AuthenticationService {
-  constructor(private credentialsService: CredentialsService) {}
+  isAuthenticated: BehaviorSubject<boolean>;
 
+  constructor(private credentialsService: CredentialsService) {
+    this.isAuthenticated = new BehaviorSubject<boolean>(false);
+  }
+
+  setIsAuth(value: boolean) {
+    this.isAuthenticated.next(value);
+  }
+  getIsAuth() {
+    return this.isAuthenticated.asObservable();
+  }
   /**
    * Authenticates the user.
    * @param context The login parameters.

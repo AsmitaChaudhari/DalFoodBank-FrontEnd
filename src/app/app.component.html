@@ -21,16 +21,19 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav nav-tabs ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="'/home'">Home</a>
+        <a class="nav-link"  [routerLink]="'/home'">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/admin/workers'">Admin</a>
+        <a class="nav-link"  [routerLink]="'/admin/workers'">Admin</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/donate'">Donate</a>
+        <a class="nav-link"  [routerLink]="'/donate'">Donate</a>
       </li>
       <li>
-        <a class="nav-link" [routerLink]="'/login'">LogOut</a>
+        <a class="nav-link" *ngIf="!userIsAuthenticated" [routerLink]="'/login'">Log In</a>
+      </li>
+      <li>
+        <a class="nav-link" *ngIf="userIsAuthenticated"  [routerLink]="'/login'" (click)="logout()" >Log Out</a>
       </li>
       <li>
         <mat-icon class="nav-icon" aria-hidden="false" aria-label="cart icon">shopping_cart</mat-icon>

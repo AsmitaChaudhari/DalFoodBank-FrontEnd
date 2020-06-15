@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   version: string | null = environment.version;
   error: string | undefined;
   loginForm!: FormGroup;
+  submitted = false;
   isLoading = false;
   pwdPattern = '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$';
 
@@ -34,19 +35,35 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {}
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      this.router.navigate(['home']);
-    } else {
+  logout() {
+    this.authenticationService.setIsAuth(false);
+  }
+  login() {
+    this.submitted=true;
+    if (this.loginForm.invalid) {
       return;
+    }else{
+
+      this.authenticationService.setIsAuth(true);
+      this.router.navigate(['/home']);
     }
+
+
   }
 
   private createForm() {
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$')]],
-      pwd: ['', [Validators.required, Validators.minLength(8), Validators.pattern(this.pwdPattern)]],
+      pwd: ['', [Validators.required, Validators.pattern(this.pwdPattern)]],
       remember: true,
     });
   }
+
+  // onSubmit() {
+  //   if (this.loginForm.valid) {
+  //     this.router.navigate(['home']);
+  //   } else {
+  //     return;
+  //   }
+  // }
 }

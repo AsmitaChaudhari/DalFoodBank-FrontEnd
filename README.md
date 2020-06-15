@@ -2,28 +2,61 @@
 
 # Assignment 2 - DAL Food Bank
 
+This Assignment task is to design Four web pages of project. Main purpose of assignment is to learn and understand usability and design principles of  front end design. This assignment dose not require any back-end work. 
+
 - [Source Code - GitHub](https://github.com/AsmitaChaudhari/dsu-food-bank)
 - [App Link](http://dsu-food-bank.herokuapp.com/home)
 
 * *Date Created*: 02 june 2020
 * *Last Modification Date*: 14 june 2020
 
-### Pages
-
-I have designed Four pages for this assignment. Links for main for pages is provided below. 
-
- - [Home](http://dsu-food-bank.herokuapp.com/home)
- - [Login](https://dsu-food-bank.herokuapp.com/login)
- - [Donate](https://dsu-food-bank.herokuapp.com/donate)
- - [Employee Management](https://dsu-food-bank.herokuapp.com/admin/workers)
-
-
 ## Author
 
 * [Asmita Chaudhari - B00835062](as320435@dal.ca)
 
+## Project Overview
+The purpose of this project is to provide web-platform for dalhousie food bank. Current system of Food bank is paper-based, which makes it hard for students and management to connect with each other during this COVID-19 time. This application will provide online platform where students can see the products and services provided by the Dal food bank.This website will be refereed as "Dal Food Bank".
 
-## Getting Started
+### Web Pages
+
+I have designed Four pages for this assignment. Links for main four pages is provided below. 
+
+- [Home Page](http://dsu-food-bank.herokuapp.com/home)
+- [Login Page](https://dsu-food-bank.herokuapp.com/login)
+- [Donate Page](https://dsu-food-bank.herokuapp.com/donate)
+- [Employee Management page](https://dsu-food-bank.herokuapp.com/admin/workers)
+
+ 1. [Home Page](http://dsu-food-bank.herokuapp.com/home) :
+Home page is the landing page of website. It contains main three section about products, donate and volunteer. User can navigate through website using navbar.
+ 2. [Login Page](https://dsu-food-bank.herokuapp.com/login) :
+Login page have simple form with email and password. Form validation form email and password is done in login form.
+3. [Donate Page](https://dsu-food-bank.herokuapp.com/donate):
+This page is designed to take donation. It contains one form and image. Design for page is simple and minimalist. Form input validation is also done for donation page.
+4. [Employee Management page](https://dsu-food-bank.herokuapp.com/admin/workers) : 
+This page is mainly for admin use. For this assignment i have skipped the admin login part and give direct access to employee management page. This page shows the list of employees and volunteer of dal food bank.
+5. [Error page](https://dsu-food-bank.herokuapp.com/pagenotfound) :
+If user enter any invalid path or path which is not defined in code then user will be redirect to error page.
+
+## Technologies
+
+- **Angular** : I have used [Angular](https://angular.io) for front end development. Angular is a full-fledged framework for development, which does not require additional libraries. Angular supports data maintenance using services, lazy loading. Angular framework is based on MVC architecture.The component based structure of Angular makes the components highly reusable across the platform Considering all the points i have decided to use Angular.
+
+- **Bootstrap** : For the page design i have used the bootstrap. Bootstrap provides direct classes which can be used in HTML tags to make website design responsive.Moreover, bootstrap is compatible with almost all platform so it is is to use.
+
+
+## Justification For Design
+
+- Front End validation : For form validation i have used [Angular](https://angular.io/api/forms/Validators) built-in validators. For login page, i have used the email and password patterns to validate the user input.
+
+- Typography : I have used css built-in fonts for the project.
+
+- Color Schema : I have used two basic colors for my webpages to make it look simple and aesthetic. Primary color is shed of blue (#22223b) and secondary color is white.
+
+- Heder And Footer - I have used the dark UI for header and Footer with light font color. All webpages have the light background so in contrast i have used  dark header and Footer to make it more aesthetic.
+ - Light Background - Light UI improves the readability. It improves the clarity so i have decided to use the light background for web pages.
+
+
+# Getting Started
 
 See deployment for notes on how to deploy the project on a live system.
 
@@ -60,7 +93,8 @@ A step by step series of examples that tell you how to get a development env run
 
 After successful installation of required software / libraries / plug-ins, marker can see the Home page of application as shown in below attachment.
 
-* Home Page<a href="https://ibb.co/M1tbNB7"><img src="https://i.ibb.co/Yd16j0h/Screenshot-41.png" alt="Screenshot-41" border="0" /></a>
+-  Home Page
+<a href="https://ibb.co/M1tbNB7"><img src="https://i.ibb.co/Yd16j0h/Screenshot-41.png" alt="Screenshot-41" border="0" /></a>
 
 
 ## Deployment
@@ -90,22 +124,7 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - [Sass](docs/coding-guides/sass.md)
 - [HTML](docs/coding-guides/html.md)
 
-#### Front End API
 
-I have used [Angular](https://angular.io) for front end development. Angular is a full-fledged framework for development, which does not require additional libraries. Angular supports data maintenance using services, lazy loading. Angular framework is based on MVC architecture. Considering all the points i have decided to use Angular.
-
-#### Front End validation
-
-For form validation i have used [Angular](https://angular.io/api/forms/Validators) built-in validators. 
-
-#### Typography
-
-I have used default fonts for the project.
-
-#### Color Schema
-
-- Primary Color - #22223b
-- Secondary Color - #FFFFFF
 
 ## Sources Used
 

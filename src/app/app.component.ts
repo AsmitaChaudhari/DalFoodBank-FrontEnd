@@ -1,9 +1,11 @@
+import { AuthenticationService } from './auth/authentication.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
-import { merge } from 'rxjs';
+import { merge, from } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
+
 
 import { environment } from '@env/environment';
 import { Logger, untilDestroyed } from '@core';
@@ -17,8 +19,10 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
+  userIsAuthenticated = false;
   constructor(
     private router: Router,
+    private authenticationService: AuthenticationService,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private translateService: TranslateService,
@@ -26,6 +30,9 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    this.authenticationService.getIsAuth().subscribe((val) => {
+      this.userIsAuthenticated = val;
+    });
     // Setup logger
     if (environment.production) {
       Logger.enableProductionMode();
@@ -62,5 +69,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.i18nService.destroy();
+  }
+
+  logout() {
+    this.authenticationService.setIsAuth(false);
   }
 }

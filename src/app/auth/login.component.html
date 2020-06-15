@@ -4,7 +4,7 @@
     <div class="card mat-elevation-z8">
       <div class="card-body">
         <h2 class="card-title">Login</h2>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="form-group">
             <!--Email-->
             <label>Email Id</label>
@@ -70,7 +70,7 @@
               <ul>
                 <li>At least one digit</li>
                 <li>One uppercase, one lowercase and, one special character</li>
-                <li>At least 8 character in length</li>
+                <li>At least 8 to 12 character in length</li>
               </ul>
             </span>
             <span class="error-message"></span>
