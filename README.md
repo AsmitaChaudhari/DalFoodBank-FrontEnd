@@ -5,7 +5,7 @@
 This Assignment task is to design Four web pages of project. Main purpose of assignment is to learn and understand usability and design principles of  front end design. This assignment dose not require any back-end work. 
 
 - [Source Code - GitHub](https://github.com/AsmitaChaudhari/dsu-food-bank)
-- [App Link](http://dsu-food-bank.herokuapp.com/home)
+- [App Link](https://dalfoodbank.herokuapp.com/home)
 
 * *Date Created*: 02 june 2020
 * *Last Modification Date*: 14 june 2020
@@ -21,20 +21,20 @@ The purpose of this project is to provide web-platform for dalhousie food bank. 
 
 I have designed Four pages for this assignment. Links for main four pages is provided below. 
 
-- [Home Page](http://dsu-food-bank.herokuapp.com/home)
-- [Login Page](https://dsu-food-bank.herokuapp.com/login)
-- [Donate Page](https://dsu-food-bank.herokuapp.com/donate)
-- [Employee Management page](https://dsu-food-bank.herokuapp.com/admin/workers)
+- [Home Page](http://dalfoodbank.herokuapp.com/home)
+- [Login Page](https://dalfoodbank.herokuapp.com/login)
+- [Donate Page](https://dalfoodbank.herokuapp.com/donate)
+- [Employee Management page](https://dalfoodbank.herokuapp.com/admin/workers)
 
- 1. [Home Page](http://dsu-food-bank.herokuapp.com/home) :
+ 1. [Home Page](http://dalfoodbank.herokuapp.com/home) :
 Home page is the landing page of website. It contains main three section about products, donate and volunteer. User can navigate through website using navbar.
- 2. [Login Page](https://dsu-food-bank.herokuapp.com/login) :
+ 2. [Login Page](https://dalfoodbank.herokuapp.com/login) :
 Login page have simple form with email and password. Form validation form email and password is done in login form.
-3. [Donate Page](https://dsu-food-bank.herokuapp.com/donate):
+3. [Donate Page](https://dalfoodbank.herokuapp.com/donate):
 This page is designed to take donation. It contains one form and image. Design for page is simple and minimalist. Form input validation is also done for donation page.
-4. [Employee Management page](https://dsu-food-bank.herokuapp.com/admin/workers) : 
+4. [Employee Management page](https://dalfoodbank.herokuapp.com/admin/workers) : 
 This page is mainly for admin use. For this assignment i have skipped the admin login part and give direct access to employee management page. This page shows the list of employees and volunteer of dal food bank.
-5. [Error page](https://dsu-food-bank.herokuapp.com/pagenotfound) :
+5. [Error page](https://dalfoodbank.herokuapp.com/pagenotfound) :
 If user enter any invalid path or path which is not defined in code then user will be redirect to error page.
 
 ## Technologies
